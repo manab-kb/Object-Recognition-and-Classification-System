@@ -26,9 +26,6 @@ res = ''
 p = ''
 x1 = ''
 
-# loading in the data
-(X_train, y_train), (X_test, y_test) = cifar10.load_data()
-
 model = tf.keras.models.load_model('CNN_ImageProcessing_Manab.h5')
 
 
@@ -148,16 +145,8 @@ class Page2(Frame):
         l1 = Label(self, text='OBJECT RECOGNITION SYSTEMS', font=LARGEFONT, bg='grey')
         l1.place(anchor='center', relx=0.5, rely=0.1)
 
-        c1 = Canvas(self, height=300, width=400, bg='grey', bd=20, highlightcolor='green')
+        c1 = Canvas(self, height=300, width=400, bg='grey', bd=20, highlightcolor='grey')
         c1.place(anchor='center', relx=0.5, rely=0.5)
-
-        '''
-        image3 = PIL.ImageTk.Image.open(file_name)
-        image3 = image3.resize((300, 300), PIL.ImageTk.Image.ANTIALIAS)
-        self.bg3 = ImageTk.PhotoImage(image3)
-        l3 = Label(self, image=self.bg3)
-        l3.place(anchor='center', relx=0.5, rely=0.5)
-        '''
 
         def test():
             global accuracy, indices1, indices2, maxs, classes, g, res, cnt, counts, x1, p
@@ -199,47 +188,55 @@ class Page2(Frame):
             test_image = np.expand_dims(test_image, axis=0)
             result = model.predict(test_image)
 
-            if result[0][0] == 1:
-                accuracy = result[0][0]*100
-                res = ' Aeroplane'
-            elif result[0][1] == 1:
-                accuracy = result[0][1] * 100
-                res = ' Automobile'
-            elif result[0][2] == 1:
-                accuracy = result[0][2] * 100
-                res = 'Bird'
-            elif result[0][3] == 1:
-                accuracy = result[0][3] * 100
-                res = 'Cat'
-            elif result[0][4] == 1:
-                accuracy = result[0][4] * 100
-                res = 'Deer'
-            elif result[0][5] == 1:
-                accuracy = result[0][5] * 100
-                res = 'Dog'
-            elif result[0][6] == 1:
-                accuracy = result[0][6] * 100
-                res = 'Frog'
-            elif result[0][7] == 1:
-                accuracy = result[0][7] * 100
-                res = 'Horse'
-            elif result[0][8] == 1:
-                accuracy = result[0][8] * 100
-                res = 'Ship'
-            elif result[0][9] == 1:
-                accuracy = result[0][9] * 100
-                res = 'Truck'
+            if result[0][0] == max(result[0]):
+                accuracy = int(result[0][0] * 100)
+                res = '   Aeroplane :\n'
+            elif result[0][1] == max(result[0]):
+                accuracy = int(result[0][1] * 100)
+                res = '   Automobile :\n'
+            elif result[0][2] == max(result[0]):
+                accuracy = int(result[0][2] * 100)
+                res = 'Bird :\n'
+            elif result[0][3] == max(result[0]):
+                accuracy = int(result[0][3] * 100)
+                res = 'Cat :\n'
+            elif result[0][4] == max(result[0]):
+                accuracy = int(result[0][4] * 100)
+                res = 'Deer :\n'
+            elif result[0][5] == max(result[0]):
+                accuracy = int(result[0][5] * 100)
+                res = 'Dog :\n'
+            elif result[0][6] == max(result[0]):
+                accuracy = int(result[0][6] * 100)
+                res = 'Frog :\n'
+            elif result[0][7] == max(result[0]):
+                accuracy = int(result[0][7] * 100)
+                res = 'Horse :\n'
+            elif result[0][8] == max(result[0]):
+                accuracy = int(result[0][8] * 100)
+                res = 'Ship :\n'
+            elif result[0][9] == max(result[0]):
+                accuracy = int(result[0][9] * 100)
+                res = 'Truck :\n'
             else:
-                res = 'Error'
+                res = 'Error!!'
 
-            l4 = Label(self, text=res, font=RESULTFONT, bg='grey')
-            l4.place(anchor='center', relx=0.4, rely=0.9)
+            image3 = PIL.ImageTk.Image.open(file_name)
+            image3 = image3.resize((400, 300), PIL.ImageTk.Image.ANTIALIAS)
+            self.bg3 = ImageTk.PhotoImage(image3)
+            l3 = Label(self, image=self.bg3)
+            l3.place(anchor='center', relx=0.5, rely=0.5)
 
-            l5 = Label(self, text=accuracy, font=RESULTFONT, bg='grey')
+            l4 = Label(self, text=res + str(accuracy)+'%', font=RESULTFONT, bg='grey')
+            l4.place(anchor='center', relx=0.5, rely=0.9)
+
+            '''
+            l5 = Label(self, text=str(accuracy) + '%', font=RESULTFONT, bg='grey')
             l5.place(anchor='center', relx=0.6, rely=0.9)
+            '''
 
         def page1_proceed():
-            c2 = Canvas(self, height=10, width=180, bg='grey', bd=20)
+            c2 = Canvas(self, height=10, width=170, bg='grey', bd=20)
             c2.place(anchor='center', relx=0.5, rely=0.9)
             f2 = Frame(self, height=100, width=240, bg='grey')
             f2.place(anchor='center', relx=0.5, rely=0.9)

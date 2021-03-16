@@ -36,7 +36,7 @@ def sift_detector(new_image, image_template):
 
 
 # Load our image template, this is our reference image
-image_template = [cv2.imread('1.jpg', 0)]
+image_template = [cv2.imread('Face_Testing.jpg', 0)]
 
 
 def live_feed():
