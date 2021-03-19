@@ -1,8 +1,8 @@
 # Object Recognition System
 An Object Recognition and classification system has been built here. The code is mainly divided into two parts :
 
-#### 1. *Object Recognition in still/non movable images* 
-#### 2. *Object Detection in live images*
+1. *Object Recognition in still/non movable images* 
+2. *Object Detection in live images*
 
 
 ### Object Recognition
