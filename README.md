@@ -9,4 +9,4 @@ An Object Recognition and classification system has been built here. The code is
 The user is given a choice to select local files from the file dialogue of their own device and upload it into the GUI, which passes it on to the *Convolutional Neural Network (CNN)* for processing and returns the *Class Name* of the image with a specific level of accuracy. 
 
 Inline-style: 
-![alt text](https://raw.githubusercontent.com/Manab784/Object-Recognition-and-Classification-System/main/Images/Readme_Images/Start_Page.PNG?token=ASR5BN3HGP2Z5ELV6XLYD2LAKTAN4"StartPageDemoImage")
+![alt text](https://github.com/Manab784/Object-Recognition-and-Classification System/blob/da08c0b07e328e7bb488a01e497fbd1e1a92272b/Images/Readme_Images/Start_Page.PNG"StartPageDemoImage")
