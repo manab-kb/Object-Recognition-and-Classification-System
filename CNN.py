@@ -9,26 +9,26 @@ import PIL.Image as Image
 from cv2 import *
 from keras.datasets import cifar10
 
+seed = 17
 
-# Set random seed for purposes of reproducibility
-seed = 21
-
-# loading in the data
+# Loading in the training and testing data
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()
 
-# normalize the inputs from 0-255 to between 0 and 1 by dividing by 255
+# Normalizing the inputs from 0-255 into values between 0-1
 X_train = X_train.astype('float32')
 X_test = X_test.astype('float32')
 X_train = X_train / 255.0
 X_test = X_test / 255.0
 
-# one hot encode outputs
+# One hot encoding the outputs
 y_train = np_utils.to_categorical(y_train)
 y_test = np_utils.to_categorical(y_test)
 class_num = y_test.shape[1]
 
+#Creating the model
 model = Sequential()
 
+#Adding layers in the model
 model.add(Conv2D(32, (3, 3), input_shape=X_train.shape[1:], padding='same'))
 model.add(Activation('relu'))
 model.add(Dropout(0.2))
@@ -60,6 +60,7 @@ model.add(BatchNormalization())
 model.add(Flatten())
 model.add(Dropout(0.2))
 
+#Adding fully connected layers in the model
 model.add(Dense(256, kernel_constraint=maxnorm(3)))
 model.add(Activation('relu'))
 model.add(Dropout(0.2))
@@ -80,6 +81,7 @@ model.add(Activation('relu'))
 model.add(Dropout(0.2))
 model.add(BatchNormalization())
 
+#Using softmax for multiple image detection
 model.add(Dense(class_num))
 model.add(Activation('softmax'))
 
@@ -96,4 +98,5 @@ model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=epochs, bat
 scores = model.evaluate(X_test, y_test, verbose=0)
 print("Accuracy: %.2f%%" % (scores[1] * 100))
 
+#Saving the model for future use
 model.save('CNN_ImageProcessing_Manab.h5')
