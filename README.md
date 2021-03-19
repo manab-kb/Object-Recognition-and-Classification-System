@@ -1,2 +1,1 @@
-# Computer-Project-PESU
-Object Recognition System
+#Object Recognition System
