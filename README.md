@@ -24,6 +24,7 @@ The user is given a choice to select local files from the file dialogue of their
 <p align="center">
 <img width="449" alt="Page_2" src="https://user-images.githubusercontent.com/77844663/111804277-f133c900-88f5-11eb-90ff-5057459d1afc.PNG" align="Center">
 </p>
+As seen in the image above, the result displayed by the CNN on the GUI consists of the *Image class name* and the *Accuracy percentage* associated with the image.
 
 ### Image Detection
 The user turns on their deivce's inbuilt camera via the GUI using the *Live Feed* button, which detects if an object is present in front of the camera by comparing it with a referrence image, provided previously to the backend of the code.
