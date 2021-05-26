@@ -29,7 +29,7 @@ As seen in the image above, the result displayed by the CNN on the GUI consists 
 ### 2. Image Detection
 The user turns on their deivce's inbuilt camera via the GUI using the *Live Feed* button, which detects if an object is present in front of the camera by comparing it with a referrence image, provided previously to the backend of the code.
 
-#### *NOTE: The camera has not been displayed for security purposes. The black window, which is opened up on the screen, is the camera module.*
+#### *NOTE: The camera has not been displayed for security purposes. The black window, which is open on the screen, is the camera module.*
 
 <p align="center">
 <img width="903" alt="Page_3" src="https://user-images.githubusercontent.com/77844663/111804313-f8f36d80-88f5-11eb-81d9-f4e44951c658.PNG" align="center">
