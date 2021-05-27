@@ -35,7 +35,7 @@ The user turns on their deivce's inbuilt camera via the GUI using the *Live Feed
 <img width="903" alt="Page_3" src="https://user-images.githubusercontent.com/77844663/111804313-f8f36d80-88f5-11eb-81d9-f4e44951c658.PNG" align="center">
 </p>
 
-# Contributing Guidelines:
+# Contributing Guidelines :
 
   ### Thanks for taking the time to contribute!
   
