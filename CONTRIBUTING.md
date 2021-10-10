@@ -4,6 +4,11 @@ We only have a couple of rules and we hope you enjoy the process :)
 
 ## Contributing Rules
 1. Don't move or delete any files. Only modify them.
+2. Put all model related codes in the CNN.py file.
+3. Put all GUI related codes in the GUI.py file.
+4. Put all Live Object Detection related codes in the yes file.
+5. New model related codes should be uploaded in the Codes folder.
+6. Upload the entire model file ('.h5' extension) in the CNN folder.
 
 ## Contributing Process
 1. Fork the repository
