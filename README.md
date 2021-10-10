@@ -13,7 +13,7 @@ An Object Recognition and classification system has been built here. The code is
 ### 1. Object Recognition
 The user is given a choice to select local files from the file dialogue of their own device and upload it into the GUI, which passes it on to the *Convolutional Neural Network (CNN)* for processing and returns the *Class Name* of the image with a specific level of accuracy. 
 
-#### *NOTE: Only '.png' files are recognizable by the CNN created. Providing any other file type will trigger an error and not let the application proceed further.*
+#### *NOTE: Only '.png' files are recognizable by the CNN created. Providing any other file type will trigger an error and not allow the application to proceed further.*
 
 ### File Dialogue : Selection of Files
 <p align="center">
