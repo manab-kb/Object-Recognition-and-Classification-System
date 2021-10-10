@@ -1,19 +1,19 @@
-# Contributing to Object Recognition and Classification Systems
-Hello and welcome! We are so glad that you are interesting in contributing to the Object Recognition and Classification Systems!  
-We only have a couple of rules and we hope you enjoy the process :)  
+# Contributing to Object Recognition and Classification System
+Hello and welcome! We are so glad that you are interested in contributing to the Object Recognition and Classification System!
+We only have a couple of rules and we hope you enjoy the process :)
 
 ## Contributing Rules
 1. Don't move or delete any files. Only modify them.
-2. Put all CNN Model related codes in the CNN.py file.
-3. Put all GUI related codes in the GUI.py file.
-4. Put all Live Object Detection related codes in the Image_Detection.py file.
-6. Put all New model related codes in the 'Code (Modules)' folder.
-7. Upload the entire model file ('.h5' extension) in the CNN_Model folder.
+2. Put all CNN Model related codes in the CNN.py file, found under the 'Code (Modules)' folder. This also requires you to follow Rule 6 below in the list.
+3. Put all GUI related codes in the GUI.py file, found under the 'Code (Modules)' folder.
+4. Put all Live Object Detection related codes in the 'Image Detection.py' file, found under the 'Code (Modules)' folder.
+5. Put all New model related codes in the 'Code (Modules)' folder.
+6. Upload the entire model file ('.h5' extension) in the CNN_Model folder.
 
 ## Contributing Process
 1. Fork the repository
-2. Clone **your forked repository** to your computer
-3. Head to the issues tab and look for an issue that you like. Issues marked "Good First Issue" or "Hacktoberfest" are great to start with!
+2. Clone your forked repository to your computer
+3. Head to the issues tab and look for an issue that you like.
 4. Once you have decided what issue to work on, give it a shot!
 5. Once done, push the code to your forked repository.
 6. Head to the Pull Requests tab and click on "Create New Pull Request"
