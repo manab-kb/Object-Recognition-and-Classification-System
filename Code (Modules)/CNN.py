@@ -34,18 +34,6 @@ model.add(Activation('relu'))
 model.add(Dropout(0.2))
 model.add(BatchNormalization())
 
-model.add(Conv2D(64, (3, 3), padding='same'))
-model.add(Activation('relu'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
-model.add(Dropout(0.2))
-model.add(BatchNormalization())
-
-model.add(Conv2D(64, (3, 3), padding='same'))
-model.add(Activation('relu'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
-model.add(Dropout(0.2))
-model.add(BatchNormalization())
-
 model.add(Conv2D(128, (3, 3), padding='same'))
 model.add(Activation('relu'))
 model.add(Dropout(0.2))
@@ -57,33 +45,18 @@ model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Dropout(0.2))
 model.add(BatchNormalization())
 
-model.add(Flatten())
-model.add(Dropout(0.2))
-
 #Adding fully connected layers in the model
 model.add(Dense(256, kernel_constraint=maxnorm(3)))
 model.add(Activation('relu'))
 model.add(Dropout(0.2))
 model.add(BatchNormalization())
 
-model.add(Dense(128, kernel_constraint=maxnorm(3)))
-model.add(Activation('relu'))
-model.add(Dropout(0.2))
-model.add(BatchNormalization())
-
 model.add(Dense(64, kernel_constraint=maxnorm(3)))
 model.add(Activation('relu'))
 model.add(Dropout(0.2))
 model.add(BatchNormalization())
 
-model.add(Dense(64, kernel_constraint=maxnorm(3)))
-model.add(Activation('relu'))
-model.add(Dropout(0.2))
-model.add(BatchNormalization())
-
-#Using softmax for multiple image detection
 model.add(Dense(class_num))
-model.add(Activation('softmax'))
 
 epochs = 25
 optimizer = 'adam'
@@ -99,4 +72,4 @@ scores = model.evaluate(X_test, y_test, verbose=0)
 print("Accuracy: %.2f%%" % (scores[1] * 100))
 
 #Saving the model for future use
-model.save('CNN_ImageProcessing_Manab.h5')
+model.save('CNN_ImageProcessing.h5')
