@@ -8,7 +8,7 @@ We only have a couple of rules and we hope you enjoy the process :)
 3. Put all GUI related codes in the GUI.py file, found under the 'Code (Modules)' folder.
 4. Put all Live Object Detection related codes in the 'Image Detection.py' file, found under the 'Code (Modules)' folder.
 5. Put all New model related codes in the 'Code (Modules)' folder.
-6. Upload the entire model file ('.h5' extension) in the CNN_Model folder.
+6. Upload the entire model file ('.h5' extension) in the 'CNN_Model' folder.
 
 ## Contributing Process
 1. Fork the repository
