@@ -22,4 +22,4 @@ We only have a couple of rules and we hope you enjoy the process :)
 9. Mention what Issue you have worked on. If the issue number is #3, you can mention "Closes #3" in the Pull Request description.
 10. Submit Pull Request
 
-It's that easy! We hope you enjoy contributing to our repository. Don't hesitate to contact any of the maintainers or ACM team about any problems!
+It's that easy! We hope you enjoy contributing to our repository. Don't hesitate to contact any of the maintainers about any problems!
