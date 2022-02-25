@@ -8,11 +8,9 @@ import tensorflow as tf
 from keras_preprocessing import image
 from keras.datasets import cifar10
 
-#Declaring various different fonts used in the GUI
 LARGEFONT = ("Brush Script MT", 30)
 BUTTONFONT = ("COPPERPLATE", 12)
 RESULTFONT = ("COPPERPLATE", 18)
-
 count = 0
 cnt = 0
 indices1 = 0
@@ -28,10 +26,9 @@ res = ''
 p = ''
 x1 = ''
 
-#Loading the previously created model
 model = tf.keras.models.load_model('CNN_ImageProcessing_Manab.h5')
 
-#Creating different classes for different frames to mimic the page switching mechanism
+
 class tkinterApp(Tk):
 
     def __init__(self, *args, **kwargs):
@@ -156,8 +153,6 @@ class Page2(Frame):
             cnt = 1
 
             '''
-            #If the code below has errors in resizing the image, this is a backup code for the same, performs the same actions as below.
-            
             im = PIL.ImageTk.Image.open("Bicycle_Testing.png")
             # the input image is required to be in the shape of dataset, i.e (32,32,3)
             results = {0: 'aeroplane', 1: 'automobile', 2: 'bird', 3: 'cat', 4: 'deer', 5: 'dog', 6: 'frog', 7: 'horse',
