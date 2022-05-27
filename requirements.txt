@@ -1,6 +1,6 @@
 Keras==2.4.3
 opencv_python==4.5.1.48
-tensorflow==2.6.4
+tensorflow==2.7.2
 Keras_Preprocessing==1.1.2
 numpy==1.21.0
 Pillow==9.0.1
