@@ -1,4 +1,4 @@
-Keras==2.13.1
+Keras==3.9.0
 opencv_python==4.8.1.78
 tensorflow==2.12.1
 Keras_Preprocessing==1.1.2
